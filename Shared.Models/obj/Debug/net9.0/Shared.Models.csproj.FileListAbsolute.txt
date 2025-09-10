@@ -1,0 +1,12 @@
+C:\Github\microservices-with-eventing\Shared.Models\bin\Debug\net9.0\Shared.Models.deps.json
+C:\Github\microservices-with-eventing\Shared.Models\bin\Debug\net9.0\Shared.Models.dll
+C:\Github\microservices-with-eventing\Shared.Models\bin\Debug\net9.0\Shared.Models.pdb
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\Shared.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\Shared.Models.AssemblyInfoInputs.cache
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\Shared.Models.AssemblyInfo.cs
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\Shared.Models.csproj.CoreCompileInputs.cache
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\Shared.Models.sourcelink.json
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\Shared.Models.dll
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\refint\Shared.Models.dll
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\Shared.Models.pdb
+C:\Github\microservices-with-eventing\Shared.Models\obj\Debug\net9.0\ref\Shared.Models.dll

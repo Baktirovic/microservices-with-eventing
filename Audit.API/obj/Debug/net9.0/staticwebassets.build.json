@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7B/giU33s+M9KzkcnP3AgwQNp+Va5+G8OUKymcjexm0=",
+  "Source": "Audit.API",
+  "BasePath": "_content/Audit.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

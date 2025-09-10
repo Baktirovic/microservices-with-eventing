@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "arMFWQsYlUCwClgL9hIMZq1J93FPoQEpxrchPZWQ0tw=",
+  "Source": "BusinessLogic.API",
+  "BasePath": "_content/BusinessLogic.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -34,7 +34,7 @@ public class PersonNameCreatedConsumer : IConsumer<PersonNameCreated>
                 {
                     ExternalId = message.UserId.ToString(),
                     Name = $"{message.FirstName} {message.LastName}".Trim(),
-                    CreatedAt = message.CreatedAt
+                    CreatedAt = DateTime.SpecifyKind(message.CreatedAt, DateTimeKind.Utc)
                 };
                 _context.Users.Add(auditUser);
                 await _context.SaveChangesAsync();
@@ -62,7 +62,7 @@ public class PersonNameCreatedConsumer : IConsumer<PersonNameCreated>
                 UserId = auditUser.Id,
                 Message = $"Person name created for user {message.Username} ({message.Email}). " +
                          $"Name: {message.FirstName} {message.MiddleName} {message.LastName}".Trim(),
-                CreatedAt = message.CreatedAt
+                CreatedAt = DateTime.SpecifyKind(message.CreatedAt, DateTimeKind.Utc)
             };
 
             _context.Logs.Add(log);

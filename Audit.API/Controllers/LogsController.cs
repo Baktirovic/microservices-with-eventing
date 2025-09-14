@@ -36,7 +36,7 @@ public class LogsController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Log>> GetLog(int id)
+    public async Task<ActionResult<Log>> GetLog(Guid id)
     {
         var log = await _context.Logs
             .Include(l => l.User)
@@ -97,7 +97,7 @@ public class LogsController : ControllerBase
     }
 
     [HttpGet("user/{userId}")]
-    public async Task<ActionResult<IEnumerable<Log>>> GetLogsByUser(int userId)
+    public async Task<ActionResult<IEnumerable<Log>>> GetLogsByUser(Guid userId)
     {
         var logs = await _context.Logs
             .Include(l => l.User)
@@ -134,6 +134,21 @@ public class LogsController : ControllerBase
         }
         
         return logs;
+    }
+
+    [HttpGet("users")]
+    public async Task<ActionResult<IEnumerable<AuditUser>>> GetAuditUsers()
+    {
+        var users = await _context.Users
+            .OrderBy(u => u.Name)
+            .ToListAsync();
+        
+        foreach (var user in users)
+        {
+            user.Logs = new List<Log>();
+        }
+        
+        return users;
     }
 }
 

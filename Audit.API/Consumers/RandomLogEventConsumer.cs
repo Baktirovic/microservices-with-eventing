@@ -3,6 +3,7 @@ using Audit.API.Data;
 using Audit.API.Models;
 using Shared.Models.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace Audit.API.Consumers;
 
@@ -10,11 +11,13 @@ public class RandomLogEventConsumer : IConsumer<RandomLogEvent>
 {
     private readonly AuditDbContext _context;
     private readonly ILogger<RandomLogEventConsumer> _logger;
+    private readonly HttpClient _httpClient;
 
-    public RandomLogEventConsumer(AuditDbContext context, ILogger<RandomLogEventConsumer> logger)
+    public RandomLogEventConsumer(AuditDbContext context, ILogger<RandomLogEventConsumer> logger, HttpClient httpClient)
     {
         _context = context;
         _logger = logger;
+        _httpClient = httpClient;
     }
 
     public async Task Consume(ConsumeContext<RandomLogEvent> context)
@@ -28,17 +31,17 @@ public class RandomLogEventConsumer : IConsumer<RandomLogEvent>
             var auditUser = await _context.Users.FirstOrDefaultAsync(u => u.ExternalId == message.UserId.ToString());
 
             if (auditUser == null)
-            {
+            { 
                 auditUser = new AuditUser
                 {
                     ExternalId = message.UserId.ToString(),
-                    Name = $"User {message.UserId}",
-                    CreatedAt = message.CreatedAt,
-                    UpdatedAt = message.CreatedAt
+                    Name = "",
+                    CreatedAt = DateTime.SpecifyKind(message.CreatedAt, DateTimeKind.Utc),
+                    UpdatedAt = DateTime.SpecifyKind(message.CreatedAt, DateTimeKind.Utc)
                 };
                 _context.Users.Add(auditUser);
                 await _context.SaveChangesAsync();
-                _logger.LogInformation("Created new AuditUser for ExternalId: {ExternalId}", auditUser.ExternalId);
+                _logger.LogInformation("Created new AuditUser for ExternalId: {ExternalId} with Name: {Name}", auditUser.ExternalId, auditUser.Name);
             }
 
             var log = new Log
@@ -46,7 +49,7 @@ public class RandomLogEventConsumer : IConsumer<RandomLogEvent>
                 Action = message.Action,
                 UserId = auditUser.Id,
                 Message = $"{message.EventType}: {message.Message} (Severity: {message.Severity})",
-                CreatedAt = message.CreatedAt
+                CreatedAt = DateTime.SpecifyKind(message.CreatedAt, DateTimeKind.Utc)
             };
 
             _context.Logs.Add(log);

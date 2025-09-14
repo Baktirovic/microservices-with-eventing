@@ -40,7 +40,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<User>> GetUser(int id)
+    public async Task<ActionResult<User>> GetUser(Guid id)
     {
         var user = await _context.Users
             .Include(u => u.Person)
@@ -94,31 +94,81 @@ public class UsersController : ControllerBase
             FirstName = "",
             LastName = "",
             MiddleName = null,
-            CreatedAt = user.CreatedAt
+            CreatedAt = DateTime.SpecifyKind(user.CreatedAt, DateTimeKind.Utc)
         });
 
         return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateUser(int id, UpdateUserRequest request)
+    public async Task<IActionResult> UpdateUser(Guid id, UpdateUserRequest request)
     {
-        var user = await _context.Users.FindAsync(id);
-        if (user == null || !user.IsActive)
+        var user = await _context.Users
+            .Include(u => u.Person)
+            .FirstOrDefaultAsync(u => u.Id == id && u.IsActive);
+            
+        if (user == null)
         {
             return NotFound();
         }
 
+        // Update user properties
         user.Email = request.Email;
         user.IsEmailVerified = request.IsEmailVerified;
         user.UpdatedAt = DateTime.UtcNow;
 
-        await _context.SaveChangesAsync();
+        // Handle person name changes
+        if (user.Person != null && (!string.IsNullOrEmpty(request.FirstName) || !string.IsNullOrEmpty(request.LastName)))
+        {
+            var oldFirstName = user.Person.FirstName;
+            var oldLastName = user.Person.LastName;
+            var oldMiddleName = user.Person.MiddleName;
+
+            // Update person names if provided
+            if (!string.IsNullOrEmpty(request.FirstName))
+            {
+                user.Person.FirstName = request.FirstName;
+            }
+            if (!string.IsNullOrEmpty(request.LastName))
+            {
+                user.Person.LastName = request.LastName;
+            }
+            
+            user.Person.UpdatedAt = DateTime.UtcNow;
+
+            // Check if names actually changed
+            bool namesChanged = (oldFirstName != user.Person.FirstName) || (oldLastName != user.Person.LastName);
+
+            await _context.SaveChangesAsync();
+
+            // Publish PersonNameChanged event if names changed
+            if (namesChanged)
+            {
+                await _publishEndpoint.Publish(new PersonNameChanged
+                {
+                    UserId = user.Id,
+                    Username = user.Username,
+                    Email = user.Email,
+                    OldFirstName = oldFirstName,
+                    NewFirstName = user.Person.FirstName,
+                    OldLastName = oldLastName,
+                    NewLastName = user.Person.LastName,
+                    OldMiddleName = oldMiddleName,
+                    NewMiddleName = user.Person.MiddleName,
+                    ChangedAt = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Utc)
+                });
+            }
+        }
+        else
+        {
+            await _context.SaveChangesAsync();
+        }
+
         return NoContent();
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteUser(int id)
+    public async Task<IActionResult> DeleteUser(Guid id)
     {
         var user = await _context.Users.FindAsync(id);
         if (user == null || !user.IsActive)
@@ -146,4 +196,6 @@ public class UpdateUserRequest
 {
     public string Email { get; set; } = string.Empty;
     public bool IsEmailVerified { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
 }

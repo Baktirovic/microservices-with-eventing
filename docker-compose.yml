@@ -1,6 +1,32 @@
 version: '3.8'
 
 services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: microservices-postgres
+    environment:
+      - POSTGRES_DB=microservices
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - microservices-network
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: microservices-rabbitmq
+    ports:
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: appuser
+      RABBITMQ_DEFAULT_PASS: supersecret
+    networks:
+      - microservices-network 
+
   account-api:
     build:
       context: .
@@ -10,6 +36,11 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=microservices;Username=postgres;Password=postgres123
+      - ConnectionStrings__RabbitMQ=rabbitmq://guest:guest@rabbitmq:5672
+    depends_on:
+      - postgres
+      - rabbitmq
     networks:
       - microservices-network
 
@@ -22,6 +53,11 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=microservices;Username=postgres;Password=postgres123
+      - ConnectionStrings__RabbitMQ=rabbitmq://guest:guest@rabbitmq:5672
+    depends_on:
+      - postgres
+      - rabbitmq
     networks:
       - microservices-network
 
@@ -34,8 +70,16 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=microservices;Username=postgres;Password=postgres123
+      - ConnectionStrings__RabbitMQ=rabbitmq://guest:guest@rabbitmq:5672
+    depends_on:
+      - postgres
+      - rabbitmq
     networks:
       - microservices-network
+
+volumes:
+  postgres_data:
 
 networks:
   microservices-network:

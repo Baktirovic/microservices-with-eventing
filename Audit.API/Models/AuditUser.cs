@@ -6,8 +6,7 @@ namespace Audit.API.Models;
 [Table("Users", Schema = "audit")]
 public class AuditUser
 {
-    [Key]
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
     [Required]
     [StringLength(100)]

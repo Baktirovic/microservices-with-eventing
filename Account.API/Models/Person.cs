@@ -6,8 +6,7 @@ namespace Account.API.Models;
 [Table("Persons", Schema = "account")]
 public class Person
 {
-    [Key]
-    public int Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
 
     [Required]
     [StringLength(100)]
@@ -50,9 +49,9 @@ public class Person
 
     public DateTime? UpdatedAt { get; set; }
 
-    [Required]
-    public int UserId { get; set; }
+    // Foreign key to User
+    public Guid UserId { get; set; }
 
-    [ForeignKey("UserId")]
+    // Navigation property
     public virtual User User { get; set; } = null!;
 }

@@ -41,3 +41,4 @@ C:\Github\microservices-with-eventing\BusinessLogic.API\bin\Debug\net9.0\MassTra
 C:\Github\microservices-with-eventing\BusinessLogic.API\bin\Debug\net9.0\MassTransit.Abstractions.dll
 C:\Github\microservices-with-eventing\BusinessLogic.API\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
 C:\Github\microservices-with-eventing\BusinessLogic.API\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\Github\microservices-with-eventing\BusinessLogic.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -90,7 +90,7 @@ public class RandomLogEventGenerator : BackgroundService
         try
         {
             var userId = await GetRandomUserIdAsync(httpClient);
-            if (userId == 0)
+            if (userId == Guid.Empty)
             {
                 _logger.LogWarning("No users found in Account.API, skipping event generation");
                 return;
@@ -119,7 +119,7 @@ public class RandomLogEventGenerator : BackgroundService
         }
     }
 
-    private async Task<int> GetRandomUserIdAsync(HttpClient httpClient)
+    private async Task<Guid> GetRandomUserIdAsync(HttpClient httpClient)
     {
         try
         {
@@ -148,7 +148,7 @@ public class RandomLogEventGenerator : BackgroundService
             _logger.LogError(ex, "Error fetching users from Account.API");
         }
 
-        return 0;
+        return Guid.Empty;
     }
 
     private Dictionary<string, object> GenerateRandomMetadata()
@@ -212,7 +212,7 @@ public class RandomLogEventGenerator : BackgroundService
 
     private class UserResponse
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Username { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
     }

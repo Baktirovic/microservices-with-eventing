@@ -6,15 +6,14 @@ namespace Audit.API.Models;
 [Table("Logs", Schema = "audit")]
 public class Log
 {
-    [Key]
-    public int Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
 
     [Required]
     [StringLength(100)]
     public string Action { get; set; } = string.Empty;
 
     [Required]
-    public int UserId { get; set; }
+    public Guid UserId { get; set; }
 
     [Required]
     [StringLength(1000)]

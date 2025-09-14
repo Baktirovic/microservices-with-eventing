@@ -173,3 +173,11 @@ C:\Github\microservices-with-eventing\Audit.API\bin\Debug\net9.0\MassTransit.dll
 C:\Github\microservices-with-eventing\Audit.API\bin\Debug\net9.0\MassTransit.Abstractions.dll
 C:\Github\microservices-with-eventing\Audit.API\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
 C:\Github\microservices-with-eventing\Audit.API\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\Github\microservices-with-eventing\Audit.API\bin\Debug\net9.0\Audit.API.staticwebassets.runtime.json
+C:\Github\microservices-with-eventing\Audit.API\bin\Debug\net9.0\Npgsql.dll
+C:\Github\microservices-with-eventing\Audit.API\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Github\microservices-with-eventing\Audit.API\obj\Debug\net9.0\compressed\wrd24y33m1-q1qayq9r7s.gz
+C:\Github\microservices-with-eventing\Audit.API\obj\Debug\net9.0\compressed\3xyhv9wkp2-gj30q21iqd.gz
+C:\Github\microservices-with-eventing\Audit.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Github\microservices-with-eventing\Audit.API\obj\Debug\net9.0\compressed\jrkaw8kiim-0a10u8xm06.gz
+C:\Github\microservices-with-eventing\Audit.API\obj\Debug\net9.0\compressed\scdfauvmge-iifztag1l4.gz

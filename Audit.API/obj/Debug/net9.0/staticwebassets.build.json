@@ -1,12 +1,1382 @@
 {
   "Version": 1,
-  "Hash": "7B/giU33s+M9KzkcnP3AgwQNp+Va5+G8OUKymcjexm0=",
+  "Hash": "NwoWQgxlW+lyv/JpYJH/GHz23RPG5hoSAmB08vGCxzg=",
   "Source": "Audit.API",
   "BasePath": "_content/Audit.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Audit.API\\wwwroot",
+      "Source": "Audit.API",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\",
+      "BasePath": "_content/Audit.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\3xyhv9wkp2-gj30q21iqd.gz",
+      "SourceId": "Audit.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Audit.API",
+      "RelativePath": "index#[.{fingerprint=gj30q21iqd}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "c4wyutaroz",
+      "Integrity": "HKmpC82TcZEJa4KCWwBh3mnxGhvvtntK4Z5XR2IBKRA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\jrkaw8kiim-0a10u8xm06.gz",
+      "SourceId": "Audit.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Audit.API",
+      "RelativePath": "script#[.{fingerprint=0a10u8xm06}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\script.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "faciqg1i7u",
+      "Integrity": "tzhwSitJawgcrwuhH+tYWUUzw+PXiPfUzeHxN4DPSrw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\script.js"
+    },
+    {
+      "Identity": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\scdfauvmge-iifztag1l4.gz",
+      "SourceId": "Audit.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Audit.API",
+      "RelativePath": "styles#[.{fingerprint=iifztag1l4}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\styles.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "in79wrwdc2",
+      "Integrity": "AsVWcUP8nLTi4RXOcgeidngbIaJgKf2nJH/2r8ci3Bs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\styles.css"
+    },
+    {
+      "Identity": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\wrd24y33m1-q1qayq9r7s.gz",
+      "SourceId": "Audit.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Audit.API",
+      "RelativePath": "README#[.{fingerprint=q1qayq9r7s}]?.md.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\README.md",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "f00xydmn2d",
+      "Integrity": "satdcFNYlPC2YDeQnToIAvIN6OSlS2SRZiOKqcX60KA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\README.md"
+    },
+    {
+      "Identity": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\index.html",
+      "SourceId": "Audit.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\",
+      "BasePath": "_content/Audit.API",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gj30q21iqd",
+      "Integrity": "7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\README.md",
+      "SourceId": "Audit.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\",
+      "BasePath": "_content/Audit.API",
+      "RelativePath": "README#[.{fingerprint}]?.md",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q1qayq9r7s",
+      "Integrity": "Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\README.md"
+    },
+    {
+      "Identity": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\script.js",
+      "SourceId": "Audit.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\",
+      "BasePath": "_content/Audit.API",
+      "RelativePath": "script#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0a10u8xm06",
+      "Integrity": "eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script.js"
+    },
+    {
+      "Identity": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\styles.css",
+      "SourceId": "Audit.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\",
+      "BasePath": "_content/Audit.API",
+      "RelativePath": "styles#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "iifztag1l4",
+      "Integrity": "tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.gj30q21iqd.html",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\3xyhv9wkp2-gj30q21iqd.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000949667616"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1052"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HKmpC82TcZEJa4KCWwBh3mnxGhvvtntK4Z5XR2IBKRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 17:59:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gj30q21iqd"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4="
+        }
+      ]
+    },
+    {
+      "Route": "index.gj30q21iqd.html",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 17:59:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gj30q21iqd"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4="
+        }
+      ]
+    },
+    {
+      "Route": "index.gj30q21iqd.html.gz",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\3xyhv9wkp2-gj30q21iqd.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HKmpC82TcZEJa4KCWwBh3mnxGhvvtntK4Z5XR2IBKRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 17:59:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gj30q21iqd"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HKmpC82TcZEJa4KCWwBh3mnxGhvvtntK4Z5XR2IBKRA="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\3xyhv9wkp2-gj30q21iqd.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000949667616"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1052"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HKmpC82TcZEJa4KCWwBh3mnxGhvvtntK4Z5XR2IBKRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 17:59:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 17:59:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7EPdqBq8IDBctxIF+r3MSmipBVg4D7tTSzod8MqkzL4="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\3xyhv9wkp2-gj30q21iqd.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HKmpC82TcZEJa4KCWwBh3mnxGhvvtntK4Z5XR2IBKRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 17:59:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HKmpC82TcZEJa4KCWwBh3mnxGhvvtntK4Z5XR2IBKRA="
+        }
+      ]
+    },
+    {
+      "Route": "README.md",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\wrd24y33m1-q1qayq9r7s.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001103752759"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "905"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"satdcFNYlPC2YDeQnToIAvIN6OSlS2SRZiOKqcX60KA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 15:19:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/markdown"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0="
+        }
+      ]
+    },
+    {
+      "Route": "README.md",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\README.md",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1829"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/markdown"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 15:19:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0="
+        }
+      ]
+    },
+    {
+      "Route": "README.md.gz",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\wrd24y33m1-q1qayq9r7s.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "905"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/markdown"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"satdcFNYlPC2YDeQnToIAvIN6OSlS2SRZiOKqcX60KA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 15:19:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-satdcFNYlPC2YDeQnToIAvIN6OSlS2SRZiOKqcX60KA="
+        }
+      ]
+    },
+    {
+      "Route": "README.q1qayq9r7s.md",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\wrd24y33m1-q1qayq9r7s.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001103752759"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "905"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"satdcFNYlPC2YDeQnToIAvIN6OSlS2SRZiOKqcX60KA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 15:19:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/markdown"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q1qayq9r7s"
+        },
+        {
+          "Name": "label",
+          "Value": "README.md"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0="
+        }
+      ]
+    },
+    {
+      "Route": "README.q1qayq9r7s.md",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\README.md",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1829"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/markdown"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 15:19:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q1qayq9r7s"
+        },
+        {
+          "Name": "label",
+          "Value": "README.md"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xvyiai2bthZn9Y42tCm1/gAgH+dXILeTu4zhfcHz2D0="
+        }
+      ]
+    },
+    {
+      "Route": "README.q1qayq9r7s.md.gz",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\wrd24y33m1-q1qayq9r7s.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "905"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/markdown"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"satdcFNYlPC2YDeQnToIAvIN6OSlS2SRZiOKqcX60KA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 15:19:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q1qayq9r7s"
+        },
+        {
+          "Name": "label",
+          "Value": "README.md.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-satdcFNYlPC2YDeQnToIAvIN6OSlS2SRZiOKqcX60KA="
+        }
+      ]
+    },
+    {
+      "Route": "script.0a10u8xm06.js",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\jrkaw8kiim-0a10u8xm06.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000330578512"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3024"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tzhwSitJawgcrwuhH+tYWUUzw+PXiPfUzeHxN4DPSrw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0a10u8xm06"
+        },
+        {
+          "Name": "label",
+          "Value": "script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0="
+        }
+      ]
+    },
+    {
+      "Route": "script.0a10u8xm06.js",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0a10u8xm06"
+        },
+        {
+          "Name": "label",
+          "Value": "script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0="
+        }
+      ]
+    },
+    {
+      "Route": "script.0a10u8xm06.js.gz",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\jrkaw8kiim-0a10u8xm06.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3024"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tzhwSitJawgcrwuhH+tYWUUzw+PXiPfUzeHxN4DPSrw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0a10u8xm06"
+        },
+        {
+          "Name": "label",
+          "Value": "script.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tzhwSitJawgcrwuhH+tYWUUzw+PXiPfUzeHxN4DPSrw="
+        }
+      ]
+    },
+    {
+      "Route": "script.js",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\jrkaw8kiim-0a10u8xm06.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000330578512"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3024"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tzhwSitJawgcrwuhH+tYWUUzw+PXiPfUzeHxN4DPSrw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0="
+        }
+      ]
+    },
+    {
+      "Route": "script.js",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eJRY+tn1rbQQpgFAdIICnWO5lLcmZfbg2A10hi107t0="
+        }
+      ]
+    },
+    {
+      "Route": "script.js.gz",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\jrkaw8kiim-0a10u8xm06.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3024"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tzhwSitJawgcrwuhH+tYWUUzw+PXiPfUzeHxN4DPSrw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tzhwSitJawgcrwuhH+tYWUUzw+PXiPfUzeHxN4DPSrw="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\scdfauvmge-iifztag1l4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000508388409"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1966"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AsVWcUP8nLTi4RXOcgeidngbIaJgKf2nJH/2r8ci3Bs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9035"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css.gz",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\scdfauvmge-iifztag1l4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1966"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AsVWcUP8nLTi4RXOcgeidngbIaJgKf2nJH/2r8ci3Bs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AsVWcUP8nLTi4RXOcgeidngbIaJgKf2nJH/2r8ci3Bs="
+        }
+      ]
+    },
+    {
+      "Route": "styles.iifztag1l4.css",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\scdfauvmge-iifztag1l4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000508388409"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1966"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AsVWcUP8nLTi4RXOcgeidngbIaJgKf2nJH/2r8ci3Bs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iifztag1l4"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA="
+        }
+      ]
+    },
+    {
+      "Route": "styles.iifztag1l4.css",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\wwwroot\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9035"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iifztag1l4"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tuEAMlB+R5LhujjbenxNZl8SmPBMBmx/VvxROTLVtUA="
+        }
+      ]
+    },
+    {
+      "Route": "styles.iifztag1l4.css.gz",
+      "AssetFile": "C:\\Github\\microservices-with-eventing\\Audit.API\\obj\\Debug\\net9.0\\compressed\\scdfauvmge-iifztag1l4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1966"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AsVWcUP8nLTi4RXOcgeidngbIaJgKf2nJH/2r8ci3Bs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Sep 2025 16:47:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iifztag1l4"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AsVWcUP8nLTi4RXOcgeidngbIaJgKf2nJH/2r8ci3Bs="
+        }
+      ]
+    }
+  ]
 }

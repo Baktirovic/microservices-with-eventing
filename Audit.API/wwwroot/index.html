@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Logs Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-clipboard-list"></i> Audit Logs Dashboard</h1>
+            <div class="header-controls">
+                <button id="refreshBtn" class="btn btn-primary">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+                <button id="clearFiltersBtn" class="btn btn-secondary">
+                    <i class="fas fa-filter"></i> Clear Filters
+                </button>
+            </div>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label for="actionFilter">Filter by Action:</label>
+                <select id="actionFilter">
+                    <option value="">All Actions</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="userFilter">Filter by User:</label>
+                <select id="userFilter">
+                    <option value="">All Users</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" placeholder="Search logs...">
+            </div>
+            <div class="filter-group">
+                <label for="dateFrom">From Date:</label>
+                <input type="datetime-local" id="dateFrom">
+            </div>
+            <div class="filter-group">
+                <label for="dateTo">To Date:</label>
+                <input type="datetime-local" id="dateTo">
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalLogs">0</div>
+                <div class="stat-label">Total Logs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="filteredLogs">0</div>
+                <div class="stat-label">Filtered Logs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="uniqueActions">0</div>
+                <div class="stat-label">Unique Actions</div>
+            </div>
+        </div>
+
+        <div class="logs-container">
+            <div class="logs-header">
+                <h2>Logs</h2>
+                <div class="logs-controls">
+                    <select id="sortBy">
+                        <option value="createdAt">Sort by Date</option>
+                        <option value="action">Sort by Action</option>
+                        <option value="user">Sort by User</option>
+                    </select>
+                    <select id="sortOrder">
+                        <option value="desc">Newest First</option>
+                        <option value="asc">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="loadingIndicator" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading logs...
+            </div>
+            
+            <div id="errorMessage" class="error-message" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="errorText"></span>
+            </div>
+            
+            <div id="logsList" class="logs-list">
+                <!-- Logs will be populated here -->
+            </div>
+            
+            <div id="noLogsMessage" class="no-logs" style="display: none;">
+                <i class="fas fa-inbox"></i>
+                <p>No logs found matching your criteria.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

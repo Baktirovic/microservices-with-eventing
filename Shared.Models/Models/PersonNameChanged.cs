@@ -2,7 +2,7 @@ namespace Shared.Models.Models;
 
 public class PersonNameChanged
 {
-    public int UserId { get; set; }
+    public Guid UserId { get; set; }
     public string Username { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string OldFirstName { get; set; } = string.Empty;
@@ -14,3 +14,4 @@ public class PersonNameChanged
     public DateTime ChangedAt { get; set; }
     public string EventId { get; set; } = Guid.NewGuid().ToString();
 }
+

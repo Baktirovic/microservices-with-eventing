@@ -2,9 +2,9 @@ namespace Shared.Models.Models;
 
 public class BusinessTransaction
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
     public string TransactionType { get; set; } = string.Empty;
-    public int AccountId { get; set; }
+    public Guid AccountId { get; set; }
     public decimal Amount { get; set; }
     public string Description { get; set; } = string.Empty;
     public DateTime ProcessedAt { get; set; }
@@ -15,8 +15,9 @@ public class BusinessTransaction
 public class CreateTransactionRequest
 {
     public string TransactionType { get; set; } = string.Empty;
-    public int AccountId { get; set; }
+    public Guid AccountId { get; set; }
     public decimal Amount { get; set; }
     public string Description { get; set; } = string.Empty;
     public string? ReferenceNumber { get; set; }
 }
+

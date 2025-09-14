@@ -34,7 +34,7 @@ public class PersonNameChangedConsumer : IConsumer<PersonNameChanged>
                 {
                     ExternalId = message.UserId.ToString(),
                     Name = $"{message.NewFirstName} {message.NewLastName}".Trim(),
-                    CreatedAt = message.ChangedAt
+                    CreatedAt = DateTime.SpecifyKind(message.ChangedAt, DateTimeKind.Utc)
                 };
                 _context.Users.Add(auditUser);
                 await _context.SaveChangesAsync();

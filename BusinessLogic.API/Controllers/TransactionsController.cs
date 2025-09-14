@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Shared.Models.Models;
+using Shared.Models.SeedData;
+using MassTransit;
 
 namespace BusinessLogic.API.Controllers;
 
@@ -7,62 +9,54 @@ namespace BusinessLogic.API.Controllers;
 [Route("api/[controller]")]
 public class TransactionsController : ControllerBase
 {
-    private static readonly List<BusinessTransaction> _transactions = new();
-    private static int _nextId = 1;
+    //private static readonly List<BusinessTransaction> _transactions = new();
+    
+    private readonly IPublishEndpoint _publishEndpoint;
+    private readonly ILogger<TransactionsController> _logger;
 
-    [HttpGet]
-    public ActionResult<IEnumerable<BusinessTransaction>> GetTransactions()
+    public TransactionsController(IPublishEndpoint publishEndpoint, ILogger<TransactionsController> logger)
     {
-        return Ok(_transactions.OrderByDescending(t => t.ProcessedAt));
+        _publishEndpoint = publishEndpoint;
+        _logger = logger;
     }
 
-    [HttpGet("{id}")]
-    public ActionResult<BusinessTransaction> GetTransaction(int id)
-    {
-        var transaction = _transactions.FirstOrDefault(t => t.Id == id);
-        if (transaction == null)
-        {
-            return NotFound();
-        }
-        return Ok(transaction);
-    }
 
     [HttpPost]
-    public ActionResult<BusinessTransaction> CreateTransaction(CreateTransactionRequest request)
+    public async Task<ActionResult<BusinessTransaction>> CreateTransaction()
     {
-        var transaction = new BusinessTransaction
+        var users = SeedDataProvider.GetSeedUsers();
+        var accounts = SeedDataProvider.GetSeedAccounts(users);
+        
+        var random = new Random();
+        var randomUser = users[random.Next(users.Count)];
+        var userAccounts = accounts.Where(a => a.UserId == randomUser.Id).ToList();
+        
+        if (!userAccounts.Any())
         {
-            Id = _nextId++,
-            TransactionType = request.TransactionType,
-            AccountId = request.AccountId,
-            Amount = request.Amount,
-            Description = request.Description,
-            ProcessedAt = DateTime.UtcNow,
-            Status = "Processed",
-            ReferenceNumber = request.ReferenceNumber ?? Guid.NewGuid().ToString()
+            return BadRequest("No accounts found for the selected user");
+        }
+        
+        var randomAccount = userAccounts[random.Next(userAccounts.Count)];
+        
+        var transactionTypes = new[] { "Deposit", "Withdrawal", "Transfer", "Payment", "Refund" };
+        var randomType = transactionTypes[random.Next(transactionTypes.Length)];
+        var randomAmount = Math.Round((decimal)(random.NextDouble() * 1000 + 10), 2);
+        var ammount = random.Next(100, 10000);
+
+        var logEvent = new RandomLogEvent
+        {
+            UserId = randomUser.Id,
+            EventType = "TransactionCreated",
+            Action = "CreateTransaction",
+            Message = $"Transaction for {randomType} with ammount of {ammount}",
+            Severity = "Info",
+            CreatedAt = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Utc)
         };
 
-        _transactions.Add(transaction);
-        return CreatedAtAction(nameof(GetTransaction), new { id = transaction.Id }, transaction);
+        await _publishEndpoint.Publish(logEvent); 
+
+        return CreatedAtAction(nameof(CreateTransaction), new { id =0 });
     }
 
-    [HttpGet("account/{accountId}")]
-    public ActionResult<IEnumerable<BusinessTransaction>> GetTransactionsByAccount(int accountId)
-    {
-        var transactions = _transactions
-            .Where(t => t.AccountId == accountId)
-            .OrderByDescending(t => t.ProcessedAt);
-        
-        return Ok(transactions);
-    }
-
-    [HttpGet("type/{transactionType}")]
-    public ActionResult<IEnumerable<BusinessTransaction>> GetTransactionsByType(string transactionType)
-    {
-        var transactions = _transactions
-            .Where(t => t.TransactionType == transactionType)
-            .OrderByDescending(t => t.ProcessedAt);
-        
-        return Ok(transactions);
-    }
 }
+

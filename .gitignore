@@ -389,7 +389,10 @@ $RECYCLE.BIN/
 *.sln.iml
 
 # Entity Framework
-Migrations/
+# Keep migration files but ignore database files
+*.db
+*.db-shm
+*.db-wal
 
 # Docker
 .dockerignore
@@ -507,3 +510,5 @@ temp/
 .Trashes
 ehthumbs.db
 Thumbs.db
+/Account.API/bin
+*.dll
